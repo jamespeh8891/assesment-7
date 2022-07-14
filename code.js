@@ -1,5 +1,18 @@
 // problem 1
 
+function sumZero(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (i !== j && arr[i] - arr[j] === 0) {
+        return true
+      }
+    }
+  }
+  return false
+}
+//runtime - O(n^2)
+
+
 //problem 2
 
 function uniqueCharsCheck(word) {
@@ -11,6 +24,8 @@ function uniqueCharsCheck(word) {
    }
    console.log(uniqueCharsCheck('Monday'))
    console.log(uniqueCharsCheck('Moonday'))
+
+   //runtime - 0(n)
    
    //problem 3
 
@@ -29,6 +44,8 @@ function uniqueCharsCheck(word) {
   console.log (isPangram("The quick brown fox jumps over the lazy dog!"))
   console.log (isPangram("I like cats, but not mice"))
 
+  //runtime - O(n)
+
   //problem 4
 
   function findLongestWord(str)
@@ -46,3 +63,5 @@ function uniqueCharsCheck(word) {
   return result;
 }
 console.log(findLongestWord('hi hello'));
+
+// runtime - O(n)
